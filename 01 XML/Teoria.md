@@ -450,3 +450,30 @@ xmllint --noout --valid note.xml
 ```
 
 La instrucció valida el format XML i l'estructura DTD.
+
+```bash
+cd "01 XML/exemple00/"
+xmllint --noout --valid note.xml
+```
+
+El resultat és "buit" perquè no hi han errors, en canvi:
+
+```bash
+xmllint --noout --valid errornote.xml
+```
+
+Dona els errors de l'arxi "errornote.xml":
+
+- Espera un element "from" i rep un "fromx"
+- L'element "body" no està tancat abans de "</note>"
+
+```text
+errornote.xml:5: element fromx: validity error : No declaration for element fromx
+   <fromx>Jani</fromx>
+                      ^
+errornote.xml:8: parser error : Opening and ending tag mismatch: body line 7 and note
+</note>
+       ^
+errornote.xml:8: parser error : Premature end of data in tag note line 3
+</note>                                       ^
+```
