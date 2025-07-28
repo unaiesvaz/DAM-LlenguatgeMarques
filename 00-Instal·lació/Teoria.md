@@ -69,3 +69,13 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 
 sudo apt update && sudo apt install github-desktop
 ```
+
+### XmlLint
+
+Instal·lar 'XmlLint' a Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install libxml2-utils
+xmllint --version
+```
