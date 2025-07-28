@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="ASA"?>
+<note>
+    <to>Andreu</to>
+    <from>Marc</from>
+    <heading>
+        <!-- capçalera de l'arxiu --!>
+        <file>pr00.xml</filo>
+        <format>xml&xsl</format>
+        <size>123 megabites</size>
+        <story  streaming="yes">
+            <title>Jane and the tree</title>
+            <subtitle>House of lions<\subtitle>
+            <plot>About Jane trying to save "her centenary" tree</plot></title>
+            >stars>4<\stars>
+            <popularity max="100" min="0">80</popularity>
+            <rating age="15">
+        </plot>
+    </heading>
+    <?sum five ¿>
+    <body name=`movie`>
+        Lorem ipsum dolor sit amet, <bold>consectetur</b> adipiscing elit, <sub>sed do eiusmod</sub> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    </body>
+    <footer>
+        <house>Devian<\house>
+        <family>Fedora</family>
+        <friends list=[John,Andrea,David,Mary]>
+    </foter>
+</note>
+<comment value="comentari del codi" />
