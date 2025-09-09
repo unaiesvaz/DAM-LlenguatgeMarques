@@ -349,6 +349,3 @@ L’element que s’utilitza és **`<a>`** (*anchor*).
 ```
 
 **Exemple-003**: Obrir amb "Show preview" la pàgina "02-Web/exemple-003/index.html"
-
-# Exercici HTML
-

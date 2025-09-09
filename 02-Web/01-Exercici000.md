@@ -28,9 +28,9 @@ Imagina que ets un paleontòleg i fas una pàgina web sobre **animals prehistòr
 Una galeria d’imatges de fòssils i dinosaures.
 Així els alumnes practiquen amb llistes, imatges i enllaços interns.
 
-1. **Títol principal** (<h1>) amb el text: Galeria de fòssils i dinosaures.
-2. Una **llista no numerada** (<ul>) on cada element (<li>) conté:
-    - Una imatge (<img>) dins la carpeta imatges/.
+1. **Títol principal** (`<h1>`) amb el text: Galeria de fòssils i dinosaures.
+2. Una **llista no numerada** (`<ul>`) on cada element (`<li>`) conté:
+    - Una imatge (`<img>`) dins la carpeta imatges/.
     - Un petit text descriptiu (per exemple: Crani de triceratops, Empremta fòssil, Fòssil d’ammonit).
 3. Un **enllaç intern a index.html** amb el text: Tornar a la pàgina principal.
 4. Un **enllaç intern a contacte.html** amb el text: Contactar amb el paleontòleg.
