@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE player SYSTEM "player.dtd">
-<player>
-    <name>Mario</name>
-    <age>30</age>
-    <team>Red Team</team>
-</player>

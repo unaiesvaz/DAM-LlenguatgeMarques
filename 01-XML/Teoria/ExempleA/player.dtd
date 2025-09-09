@@ -1,4 +1,0 @@
-<!ELEMENT player (name, age, team)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT age (#PCDATA)>
-<!ELEMENT team (#PCDATA)>
