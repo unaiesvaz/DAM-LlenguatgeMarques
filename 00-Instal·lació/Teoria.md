@@ -36,7 +36,7 @@ A Windows, el primer cop que s'obre un terminal d'Ubuntu cal definir un nom d'us
 ### Visual Studio Code
 ---
 <center>
-<img src="./assets/logoVisualStudioCode.png" style="width: 90%; max-width: 150px">
+<img src="./assets/logoVisualStudioCode.svg" style="width: 90%; max-width: 150px">
 </center>
 
 **VS Code** és un editor de codi lleuger i extensible que proporciona una experiència IDE completa. És altament personalitzable a través d'extensions que permeten afegir funcionalitats com depuració, autocompletat de codi, suport per a múltiples llenguatges de programació i integració amb Git. VS Code és molt popular perquè equilibra potència i simplicitat.
