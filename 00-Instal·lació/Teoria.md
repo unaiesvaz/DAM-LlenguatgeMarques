@@ -70,6 +70,20 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update && sudo apt install github-desktop
 ```
 
+### Extensió 'Live Preview'
+
+Intal·la l'extensió *"Live Preview"* de *"Visual Studio Code"*. A l'apartat **Extensions**:
+
+<center>
+<img src="./assets/extensions.png" style="width: 90%; max-width: 400px">
+</center>
+
+Buscar i instal·lar l'extensió:
+
+<center>
+<img src="./assets/livePreview.png" style="width: 90%; max-width: 400px">
+</center>
+
 ### XmlLint
 
 Instal·lar 'XmlLint' a Ubuntu:
