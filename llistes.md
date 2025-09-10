@@ -67,6 +67,5 @@ MIX1 - Aula 207
 - Trollano Lopez, Raul
 - Vargas Sauvajon, Arthur
 - Vega Mori, Yassandra Nicole
-- Perdomo Baca, Cinthia V Valeria
 
 
