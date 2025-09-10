@@ -1,4 +1,4 @@
-AMS1 - Aula 202
+**AMS1 - Aula 202**
 
 - Aguado Lopez, Abel
 - Aguilar Ojeda, Diego Ezequiel
@@ -21,7 +21,7 @@ AMS1 - Aula 202
 - Ortiz Lopez, Miguel
 - Pérez Padilla, Albert
 
-AWS1 - Aula 206
+**AWS1 - Aula 206**
 
 - Aguilar Pérez, Nazan
 - Aldana Rivera, Alisson Berenice
@@ -44,7 +44,7 @@ AWS1 - Aula 206
 - Ouald Ali,  Ibtissam
 - Perdomo Baca, Cinthia Valeria
 
-MIX1 - Aula 207
+**MIX1 - Aula 207**
 
 - Puig Mosquera, Anna
 - Rios Cruz, Derek Geancarlos
