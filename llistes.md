@@ -21,7 +21,7 @@ AMS1 - Aula 202
 - Ortiz Lopez, Miguel
 - Pérez Padilla, Albert
 
-_____________________________
+________________________
 
 AWS1 - Aula 206
 
@@ -46,7 +46,7 @@ AWS1 - Aula 206
 - Ouald Ali,  Ibtissam
 - Perdomo Baca, Cinthia Valeria
 
-_____________________________
+________________________
 
 MIX1 - Aula 207
 
