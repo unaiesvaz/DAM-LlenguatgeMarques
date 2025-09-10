@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    <style>
+      /* Enllaços */
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:visited {
+        color: orange; /* Es veu diferent si ja has visitat l'enllaç */
+      }
+
+      /* Text amb hover */
+      .hover-text {
+        color: black;
+      }
+      .hover-text:hover {
+        color: orange;
+        cursor: pointer;
+      }
+
+      /* Llista amb pseudoclasses */
+      ul li:first-child {
+        color: red; /* Primer element */
+      }
+      ul li:last-child {
+        color: blue; /* Últim element */
+      }
+      ul li:nth-child(n+2):not(:last-child) {
+        color: green; /* Els del mig */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudoclasses en acció</h1>
+
+    <h2>Enllaços</h2>
+    <p>
+      <a href="index.html">Enllaç a aquesta pàgina (no visitat)</a><br/>
+      <a href="index.html#vist">Enllaç a aquesta pàgina (vist si ja has clicat)</a>
+    </p>
+
+    <h2>Text amb hover</h2>
+    <p class="hover-text">Passa el ratolí per sobre meu!</p>
+
+    <h2>Llista</h2>
+    <ul>
+      <li>Primer element (vermell)</li>
+      <li>Element del mig (verd)</li>
+      <li>Un altre element del mig (verd)</li>
+      <li>Últim element (blau)</li>
+    </ul>
+  </body>
+</html>

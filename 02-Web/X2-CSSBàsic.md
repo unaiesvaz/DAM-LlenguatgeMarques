@@ -135,3 +135,31 @@ Les diferències amb l'**id** són que:
 ```
 
 **Exemple-005**: Obrir amb "Show preview" la pàgina "02-Web/exemple-005/index.html"
+
+## Pseudoclasses CSS
+
+Les **Pseudoclasses** són “estats especials” que serveixen per aplicar estils quan passa una condició, s’escriuen amb : davant del nom.
+
+**Interacció amb l'usuari**
+
+- **:hover** → quan el ratolí passa per sobre d’un element.
+- **:active** → quan l’element està sent clicat.
+- **:focus** → quan l’element (per exemple, un input) té el focus del teclat.
+
+**Posició dins del contenidor**
+
+- **:first-child** → el primer fill d’un element.
+- **:last-child** → l’últim fill d’un element.
+- **:nth-child(n)** → el fill número n (o amb patrons com odd, even).
+- **:first-of-type**, 
+- **:last-of-type** → el primer/últim element d’un tipus concret.
+
+**Per estat de formularis**
+
+- **:checked** → un checkbox o radiobutton seleccionat.
+- **:disabled** → un element de formulari deshabilitat.
+- **:enabled** → un element de formulari habilitat.
+- **:required** → un camp obligatori.
+- **:valid / :invalid** → segons si el valor del formulari és vàlid o no.
+
+**Exemple-006**: Obrir amb "Show preview" la pàgina "02-Web/exemple-006/index.html"
