@@ -50,22 +50,23 @@ AWS1 - Aula 206
 
 MIX1 - Aula 207
 
+- Portero Utrilla, Luis
 - Puig Mosquera, Anna
 - Rios Cruz, Derek Geancarlos
+- Rios Herrera, Javier
+- Rodríguez Galeas, Fernando Jafet
 - Rojas Duran, Melisbeth Altagracia
+- Romero Ramos, Pablo
+- Rozalén Gargallo, Berta
+- Sandoval Rojas, Jormary Emperatriz
 - Santillán Miñán, Isaac Ariel
 - Silva Granados, Izan
 - Silvestre Ramírez, Francisco Alberto
+- Sojo Collado, Saúl
 - Tarragona Dorrego, Gerard
 - Trollano Lopez, Raul
 - Vargas Sauvajon, Arthur
 - Vega Mori, Yassandra Nicole
 - Perdomo Baca, Cinthia V Valeria
-- Portero Utrilla, Luis
-- Rios Herrera, Javier
-- Rodríguez Galeas, Fernando Jafet
-- Romero Ramos, Pablo
-- Rozalén Gargallo, Berta
-- Sandoval Rojas, Jormary Emperatriz
-- Sojo Collado, Saúl
+
 
