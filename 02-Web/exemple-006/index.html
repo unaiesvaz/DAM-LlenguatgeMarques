@@ -5,19 +5,21 @@
     <title>Principal</title>
     <style>
       /* Enllaços */
-      #enllac {
+      .enllac {
         color: blue;
         text-decoration: none;
       }
-      #enllac:visited {
+      .enllac:visited {
         color: red; /* Es veu diferent si ja has visitat l'enllaç */
       }
 
       /* Text amb hover */
       .hover-text {
+        border: solid 1px gray;
         color: black;
       }
       .hover-text:hover {
+        border: solid 1px blue;
         color: orange;
         cursor: pointer;
       }
@@ -40,8 +42,8 @@
     <h2>Enllaços</h2>
     <p>
       <a href="index.html">Enllaç a aquesta pàgina (sense estil)</a><br/>
-      <a id="enllac" href="index.html">Enllaç a aquesta pàgina (visitat)</a><br/>
-      <a id="enllac" href="index.html#posicio">Enllaç a aquesta pàgina (vermell si l'has clickat)</a>
+      <a class="enllac" href="index.html">Enllaç a aquesta pàgina (visitat)</a><br/>
+      <a class="enllac" href="index.html#posicio">Enllaç a aquesta pàgina (vermell si l'has clickat)</a>
     </p>
 
     <h2>Text amb hover</h2>
