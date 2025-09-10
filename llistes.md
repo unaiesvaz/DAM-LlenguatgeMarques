@@ -53,7 +53,7 @@ MIX1 - Aula 207
 - Silva Granados, Izan
 - Silvestre Ramírez, Francisco Alberto
 - Tarragona Dorrego, Gerard
- Trollano Lopez, Raul
+- Trollano Lopez, Raul
 - Vargas Sauvajon, Arthur
 - Vega Mori, Yassandra Nicole
 - Perdomo Baca, Cinthia V Valeria
