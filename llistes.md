@@ -21,6 +21,8 @@
 - Ortiz Lopez, Miguel
 - Pérez Padilla, Albert
 
+-----
+
 **AWS1 - Aula 206**
 
 - Aguilar Pérez, Nazan
@@ -43,6 +45,8 @@
 - Ntellou,  Safae
 - Ouald Ali,  Ibtissam
 - Perdomo Baca, Cinthia Valeria
+
+-----
 
 **MIX1 - Aula 207**
 
