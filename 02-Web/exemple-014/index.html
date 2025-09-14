@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta charset="UTF-8">
+       <title>Exemple 014 — z-index amb opacitat</title>
+       <style>
+           body {
+               font-family: sans-serif;
+               margin: 40px;
+               background: #f2f2f2;
+           }
+
+           .caixa {
+               position: absolute; /* necessari perquè funcioni z-index */
+               width: 150px;
+               height: 150px;
+               color: white;
+               font-weight: bold;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 8px;
+               opacity: 0.8; /* transparència per veure la superposició */
+           }
+
+           .vermella {
+               background: red;
+               top: 40px; left: 40px;
+               z-index: 1; /* més al fons */
+           }
+
+           .blava {
+               background: blue;
+               top: 80px; left: 80px;
+               z-index: 2; /* al mig */
+           }
+
+           .verda {
+               background: green;
+               top: 120px; left: 120px;
+               z-index: 3; /* per sobre de totes */
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Exemple 014 — z-index amb opacitat</h1>
+       <p>Les caixes tenen <code>opacity: 0.8</code> per mostrar clarament la superposició segons el valor de <code>z-index</code>:</p>
+
+       <div class="caixa vermella">Vermella (z=1)</div>
+       <div class="caixa blava">Blava (z=2)</div>
+       <div class="caixa verda">Verda (z=3)</div>
+   </body>
+</html>

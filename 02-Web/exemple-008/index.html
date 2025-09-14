@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta charset="UTF-8">
+       <title>Exemple 008</title>
+       <style>
+           /* Bloc per defecte: ocupa tota l'amplada */
+           div {
+               background-color: lightblue;
+               margin: 5px;
+               padding: 10px;
+           }
+
+           /* Línia per defecte: només ocupa el contingut */
+           span {
+               background-color: lightgreen;
+               margin: 5px;
+               padding: 5px;
+           }
+
+           /* Canviem un bloc perquè es comporti com a línia */
+           .bloc-inline {
+               display: inline;
+               background-color: pink;
+           }
+
+           /* Canviem un element de línia perquè es comporti com a bloc */
+           .linia-bloc {
+               display: block;
+               background-color: orange;
+           }
+
+           /* Exemple de inline-block: es posen en línia però amb mida pròpia */
+           .inline-bloc {
+               display: inline-block;
+               width: 120px;
+               height: 50px;
+               background-color: violet;
+               margin: 5px;
+               text-align: center;
+               line-height: 50px;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Exemple 008: Bloc vs Línia</h1>
+
+       <h2>Elements de bloc (per defecte)</h2>
+       <div>Div 1</div>
+       <div>Div 2</div>
+       <p>Paràgraf 1</p>
+       <p>Paràgraf 2</p>
+
+       <h2>Elements de línia (per defecte)</h2>
+       <span>Span A</span>
+       <span>Span B</span>
+       <a href="#">Enllaç</a>
+       <a href="#">Un altre enllaç</a>
+
+       <h2>Canviar el comportament amb display</h2>
+       <div class="bloc-inline">Div que ara és inline</div>
+       <div class="bloc-inline">Un altre div inline</div>
+
+       <span class="linia-bloc">Span convertit en bloc</span>
+       <span class="linia-bloc">Un altre span bloc</span>
+
+       <h2>Exemple de inline-block</h2>
+       <div class="inline-bloc">Caixa 1</div>
+       <div class="inline-bloc">Caixa 2</div>
+       <div class="inline-bloc">Caixa 3</div>
+   </body>
+</html>

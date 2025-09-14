@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple 011 — Flexbox bàsic</title>
+  <style>
+    :root { --box: 70px; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 20px;
+      background: #fafafa;
+    }
+    h1, h2 { margin: 16px 0 8px; }
+    .nota { color: #555; margin: 0 0 12px; }
+
+    /* Estil general de contenidors de prova */
+    .demo {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+      padding: 10px;
+      margin: 14px 0 28px;
+    }
+
+    /* CAIXES (items) de mostra */
+    .item {
+      width: var(--box);
+      height: var(--box);
+      border-radius: 6px;
+      color: #222;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #00000022;
+      background: #e3f2fd; /* blau suau */
+    }
+    .item:nth-child(2) { background: #c8e6c9; } /* verd suau */
+    .item:nth-child(3) { background: #ffe0b2; } /* taronja suau */
+    .item:nth-child(4) { background: #f8bbd0; } /* rosa suau */
+    .item:nth-child(5) { background: #d1c4e9; } /* lila suau */
+
+    /* 1) Contenidor flex — fila per defecte */
+    .flex-row {
+      display: flex;          /* Activa Flexbox */
+      gap: 10px;              /* espai entre items */
+      /* flex-direction: row; per defecte */
+    }
+
+    /* 2) Direcció columna */
+    .flex-col {
+      display: flex;
+      flex-direction: column; /* col·loca els ítems en columna */
+      gap: 10px;
+      height: calc(var(--box) * 4 + 40px); /* alçada per veure l'alineació vertical */
+      border: 1px dashed #ddd;
+      padding: 10px;
+    }
+
+    /* 3) Wrap (retorn de línia) */
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;        /* permet saltar de línia */
+      gap: 10px;
+      border: 1px dashed #ddd;
+      padding: 10px;
+      width: 330px;           /* ample reduït per forçar el wrap */
+    }
+
+    /* 4) Justificació al llarg de l'eix principal (row) */
+    .jc { display: flex; gap: 10px; border: 1px dashed #ddd; padding: 10px; }
+    .jc.start        { justify-content: flex-start; }
+    .jc.center       { justify-content: center; }
+    .jc.end          { justify-content: flex-end; }
+    .jc.between      { justify-content: space-between; }
+    .jc.around       { justify-content: space-around; }
+    .jc.evenly       { justify-content: space-evenly; }
+
+    /* 5) Alineació transversal (eix secundari) en fila → vertical */
+    .ai {
+      display: flex;
+      gap: 10px;
+      border: 1px dashed #ddd;
+      padding: 10px;
+      height: 120px; /* alçada per veure diferències d'alineació */
+    }
+    .ai.start   { align-items: flex-start; }
+    .ai.center  { align-items: center; }
+    .ai.end     { align-items: flex-end; }
+    .ai.stretch { align-items: stretch; }
+    .ai.stretch .item { height: auto; padding: 6px 0; } /* estira verticalment */
+
+    /* 6) flex-grow / shrink / basis */
+    .grow {
+      display: flex;
+      gap: 10px;
+      border: 1px dashed #ddd;
+      padding: 10px;
+    }
+    .g1  { flex: 1 1 0; }     /* creix 1 part */
+    .g2  { flex: 2 1 0; }     /* creix 2 parts → el doble que g1 */
+    .fix { flex: 0 0 120px; } /* mida "fixa" via basis i sense creixement */
+
+    /* 7) align-self i order per ítems individuals */
+    .self {
+      display: flex;
+      align-items: center;     /* alineació base */
+      gap: 10px;
+      border: 1px dashed #ddd;
+      padding: 10px;
+      height: 140px;
+    }
+    .self .a-start  { align-self: flex-start; } /* sobreescriu l'alineació del contenidor */
+    .self .a-end    { align-self: flex-end;   }
+    .self .ord-1    { order: 1; }
+    .self .ord-2    { order: 2; }
+    .self .ord--1   { order: -1; }            /* va abans dels altres */
+  </style>
+</head>
+<body>
+  <h1>Exemple 011 — Flexbox bàsic</h1>
+  <p class="nota">Mostra de fila/columna, wrap, justificació, alineació, creixement i ordre.</p>
+
+  <h2>1) Fila bàsica (display: flex;)</h2>
+  <div class="demo flex-row">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h2>2) Columna (flex-direction: column)</h2>
+  <div class="demo flex-col">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>3) Wrap (flex-wrap: wrap)</h2>
+  <p>Fer diverses linies si els elements no hi caben en una.</p>
+  <div class="demo flex-wrap">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <h2>4) Justify Content (fila)</h2>
+  Justificar a l'inici
+  <div class="demo jc start">
+    <div class="item">S</div><div class="item">T</div><div class="item">A</div>
+  </div>
+  Justificar al centre
+  <div class="demo jc center">
+    <div class="item">C</div><div class="item">E</div><div class="item">N</div>
+  </div>
+  Justificar al final
+  <div class="demo jc end">
+    <div class="item">E</div><div class="item">N</div><div class="item">D</div>
+  </div>
+  Espaiar elements al justificar
+  <div class="demo jc between">
+    <div class="item">B</div><div class="item">E</div><div class="item">T</div>
+  </div>
+  Espaiar elements, però mantenint espaiat proporcional als extrems
+  <div class="demo jc around">
+    <div class="item">A</div><div class="item">R</div><div class="item">O</div>
+  </div>
+  Espaiar elements, mantenint espaiat als extrems
+  <div class="demo jc evenly">
+    <div class="item">E</div><div class="item">V</div><div class="item">N</div>
+  </div>
+
+  <h2>5) Align Items (vertical en fila)</h2>
+  Alinear a l'inici del contenedor
+  <div class="demo ai start">
+    <div class="item" style="height:40px;">↑</div>
+    <div class="item">•</div>
+    <div class="item" style="height:100px;">↓</div>
+  </div>
+  Alinear al centre del contenedor
+  <div class="demo ai center">
+    <div class="item" style="height:40px;">↑</div>
+    <div class="item">•</div>
+    <div class="item" style="height:100px;">↓</div>
+  </div>
+  Alinear al final del contenedor
+  <div class="demo ai end">
+    <div class="item" style="height:40px;">↑</div>
+    <div class="item">•</div>
+    <div class="item" style="height:100px;">↓</div>
+  </div>
+  Alinear ocupant tot l'espai del contenedor
+  <div class="demo ai stretch">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>6) flex-grow / shrink / basis</h2>
+  <p class="nota">El segon creix el doble que el primer; l’últim té basis fixa de 120px.</p>
+  <div class="demo grow">
+    <div class="item g1">1</div>
+    <div class="item g2">2</div>
+    <div class="item fix">fix</div>
+  </div>
+
+  <h2>7) align-self i order per ítem</h2>
+  <p class="nota">El blau puja (align-self: start), el rosa baixa (align-self: end) i l’ordre s’altera.</p>
+  <div class="demo self">
+    <div class="item ord-2">Ord 2</div>
+    <div class="item a-start ord--1">Start & Ord -1</div>
+    <div class="item a-end">End</div>
+    <div class="item">Normal</div>
+  </div>
+</body>
+</html>

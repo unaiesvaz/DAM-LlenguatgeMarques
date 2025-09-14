@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple 012 — CSS Grid</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 20px;
+      background: #fafafa;
+    }
+    h1, h2 { margin: 16px 0 8px; }
+    .nota { color: #555; margin: 0 0 12px; }
+
+    /* Estil general per contenidors de demostració */
+    .demo {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: white;
+      padding: 10px;
+      margin: 14px 0 28px;
+    }
+
+    /* Estil per als items de la graella */
+    .item {
+      background: #90caf9;
+      border: 1px solid #00000033;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #222;
+    }
+    .item:nth-child(2) { background: #a5d6a7; } /* verd suau */
+    .item:nth-child(3) { background: #ffcc80; } /* taronja suau */
+    .item:nth-child(4) { background: #f48fb1; } /* rosa suau */
+    .item:nth-child(5) { background: #ce93d8; } /* lila suau */
+    .item:nth-child(6) { background: #fff59d; } /* groc suau */
+
+    /* 1) Graella bàsica 2x2 */
+    .grid-basic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;  /* dues columnes iguals */
+      grid-template-rows: 100px 100px; /* dues files de 100px */
+      gap: 10px;                       /* espai entre caixes */
+    }
+
+    /* 2) Graella amb més columnes */
+    .grid-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* 3) Posicionament manual d’items */
+    .grid-areas {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 80px 150px 80px;
+      gap: 10px;
+    }
+    .header { grid-column: 1 / 4; background: #64b5f6; }
+    .menu   { grid-column: 1 / 2; grid-row: 2; background: #81c784; }
+    .main   { grid-column: 2 / 3; grid-row: 2; background: #ffb74d; }
+    .aside  { grid-column: 3 / 4; grid-row: 2; background: #ba68c8; }
+    .footer { grid-column: 1 / 4; grid-row: 3; background: #e57373; }
+  </style>
+</head>
+<body>
+  <h1>Exemple 012 — CSS Grid</h1>
+  <p class="nota">Mostra una graella bàsica, una de 3 columnes i un layout amb header/menu/main/aside/footer.</p>
+
+  <h2>1) Graella bàsica 2x2</h2>
+  <div class="demo grid-basic">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+  <h2>2) Graella amb 3 columnes</h2>
+  <div class="demo grid-3col">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+  </div>
+
+  <h2>3) Layout amb Grid (header, menu, main, aside, footer)</h2>
+  <div class="demo grid-areas">
+    <div class="item header">Header</div>
+    <div class="item menu">Menu</div>
+    <div class="item main">Main</div>
+    <div class="item aside">Aside</div>
+    <div class="item footer">Footer</div>
+  </div>
+</body>
+</html>

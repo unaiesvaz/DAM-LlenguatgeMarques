@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple 009</title>
+    <style>
+        body {
+            height: 600px; /* només per veure l'espai */
+        }
+
+        .caixa {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Position: static (per defecte) */
+        .static {
+            background-color: steelblue;
+            position: static;
+        }
+
+        /* Position: relative (mou la caixa respecte posició original) */
+        .relative {
+            background-color: seagreen;
+            position: relative;
+            top: 20px;
+            left: 40px;
+        }
+
+        /* Position: absolute (respecte al contenidor posicionat) */
+        .contenidor {
+            position: relative; /* el punt de referència pels absoluts */
+            background-color: lightgray;
+            height: 250px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .absolute {
+            background-color: tomato;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemple 009: Position (static, relative, absolute)</h1>
+
+    <div class="caixa static">Static (per defecte)</div>
+    <div class="caixa relative">Relative (mou 20px avall i 40px a la dreta)</div>
+
+    <div class="contenidor">
+        Contenidor amb `position: relative;`
+        <div class="caixa absolute">Absolute (20px del top i right)</div>
+    </div>
+</body>
+</html>

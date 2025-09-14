@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple 010 — Sticky múltiples</title>
+  <style>
+    :root{
+      /* Alçada aproximada de separació perquè els sticky passin per sota la barra fixed */
+      --sticky-offset: 60px; 
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fafafa;
+    }
+
+    /* Barra fixa superior */
+    .barra-fixed {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 15px;
+      background-color: darkred;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    /* Contenidor general: marge superior per no quedar tapat per la barra fixed */
+    .contenidor {
+      margin-top: 90px;
+      padding: 12px;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    /* Caixes de contingut buides (només per fer scroll i veure el comportament) */
+    .caixa {
+      height: 200px;
+      margin: 16px 0;
+      background-color: #e0e0e0;
+      border: 1px solid #999;
+      border-radius: 6px;
+    }
+
+    /* Capçaleres sticky de secció */
+    .sticky-sep {
+      position: sticky;
+      top: var(--sticky-offset);
+      height: 25px;               /* demanat: alt de 25px */
+      line-height: 25px;          /* centra el text verticalment */
+      padding: 0 10px;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 5;                 /* per sobre de les caixes */
+    }
+
+    /* Colors per secció (només decoratiu) */
+    .animals  { background-color: #ffd180; } /* taronja suau */
+    .plantes  { background-color: #c8e6c9; } /* verd suau */
+    .minerals { background-color: #bbdefb; } /* blau suau */
+
+    /* Opcional: separació visual entre seccions */
+    .seccio {
+      padding-block: 8px 16px;
+      border-bottom: 1px dashed #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="barra-fixed">Barra FIXED (sempre visible a dalt)</div>
+
+  <div class="contenidor">
+    <!-- Secció: Animals -->
+    <section class="seccio">
+      <div class="sticky-sep animals">Animals</div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+    </section>
+
+    <!-- Secció: Plantes -->
+    <section class="seccio">
+      <div class="sticky-sep plantes">Plantes</div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+    </section>
+
+    <!-- Secció: Minerals -->
+    <section class="seccio">
+      <div class="sticky-sep minerals">Minerals</div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+      <div class="caixa"></div>
+    </section>
+  </div>
+</body>
+</html>
