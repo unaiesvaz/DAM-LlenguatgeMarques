@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+        <meta charset="UTF-8">
+        <title>Principal</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+        /* Tots els <p> dins de #base (descendents) → verds */
+        #base p {
+          color: green;
+        }
+
+        /* Només els <p> que són fills directes de #base → vermells */
+        #base > p {
+          color: red;
+        }
+
+        /* Només els <h2> que són fills directes de #base → blaus */
+        #base > h2 {
+          color: blue;
+        }
+
+        /* Exemple de pseudoelements */
+        .decorat::before {
+          content: "👉 ";
+          color: blue;
+        }
+
+        .decorat::after {
+          content: " ✔";
+          color: green;
+        }
+        </style>
+    </head>
+   <body>
+       <div id="base">
+           <h2>Fill directe d’un div#base</h2>
+           <section>
+               <h2>Descendent dins d’un section → no és fill directe</h2>
+           </section>
+       </div>
+
+       <div>
+           <h2>No pertany a div#base</h2>
+       </div>
+
+       <p>Un paràgraf fora de #base</p>
+       <div id="base">
+           <p>Paràgraf fill directe de #base</p>
+           <section>
+               <p>Paràgraf descendent dins d’una secció de #base</p>
+           </section>
+       </div>
+
+       <!-- Exemple de pseudoelements -->
+       <p class="decorat">Aquest paràgraf té afegits ::before i ::after.</p>
+   </body>
+</html>

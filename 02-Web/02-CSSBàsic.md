@@ -65,7 +65,7 @@ S’escriu en un arxiu .css separat i s’importa amb un element `<link>` dins d
 
 Un cop definits els estils, els podem aplicar de diferents maneres:
 
-### Per etiqueta
+### Per selector
 
 Afecta a tots els elements d'aquell tipus, en aquest cas tots els `<p>` tindràn color lila:
 ```css
@@ -76,11 +76,11 @@ p {
 
 ### Per identificador "id"
 
-’aplica a un element amb un id únic.
+S’aplica a un element amb un id únic. Els identificadors han de ser únics a la pàgina, no poden estar repetits.
 
 **Important**, cada element ha de tenir un **id** diferent, per tant un estil definit amb **id** només es pot aplicar a un element.
 
-Al CSS es defineix amb **#** davant de l'etiqueta:
+Al CSS es defineix amb **#** davant del selector:
 ```css
 #titol {
   font-size: 24px;
@@ -93,7 +93,7 @@ Al CSS es defineix amb **#** davant de l'etiqueta:
 
 ### Per atribut "class"
 
-Afecta tots els elements, que posin l'etiqueta definida al CSS a l'atribut **class"**
+Afecta tots els elements, que posin el selector definit al CSS a l'atribut **class"**. Pot aparèixer tants cops com calgui, i aes poden acumular diverses "class" en un mateix element.
 ```css
 .text-important {
   color: red;
@@ -136,9 +136,9 @@ Les diferències amb l'**id** són que:
 
 **Exemple-005**: Obrir amb "Show preview" la pàgina "02-Web/exemple-005/index.html"
 
-## Pseudoclasses CSS
+## Pseudo-classes CSS
 
-Les **Pseudoclasses** són “estats especials” que serveixen per aplicar estils quan passa una condició, s’escriuen amb : davant del nom.
+Les **Pseudo-classes** són “estats especials” que serveixen per aplicar estils quan passa una condició, s’escriuen amb : davant del nom.
 
 **Interacció amb l'usuari**
 
@@ -163,3 +163,69 @@ Les **Pseudoclasses** són “estats especials” que serveixen per aplicar esti
 - **:valid / :invalid** → segons si el valor del formulari és vàlid o no.
 
 **Exemple-006**: Obrir amb "Show preview" la pàgina "02-Web/exemple-006/index.html"
+
+## Jerarquia de selectors combinats
+
+Es poden crear selectors combinats amb els caràcters espai " " i major ">".
+
+### Jerarquia combinada amb caràcter espai " "
+
+Selecciona els elements descendents d’un altre, encara que no siguin fills directes.
+
+El següent selector defineix que qualsevol element `<p>` dins d'un element `<div>` serà de color vermell:
+```css
+div p {
+  color: red;
+}
+```
+```html
+<div>
+  <p>Vermell</p>
+  <section>
+    <p>També vermell</p>
+  </section>
+</div>
+```
+
+### Jerarquia combinada amb caràcter major ">"
+
+Selecciona només els elements que són fills directes del pare.
+```css
+#base > h2 {
+  color: blue;
+}
+```
+
+Només els elements `<h2>` que estàn directament a sota d'un element amb identificador "base" seràn de color blau.
+<div id="base">
+  <h2>Aquest serà blau</h2>
+  <section>
+    <h2>Aquest no és blau</h2>
+  </section>
+</div>
+<div>
+  <h2>Aquest no és blau</h2>
+</div>
+
+## Pseudo-elements CSS
+
+Els pseudoelements serveixen per afegir contingut o aplicar estils a parts concretes d’un element, encara que no estiguin escrites directament a l’HTML.
+
+S’escriuen amb :: davant del nom.
+
+```css
+p::before {
+  content: "👉 ";
+  color: blue;
+}
+
+p::after {
+  content: " ✔";
+  color: green;
+}
+```
+```html
+<p>Aquest paràgraf tindrà símbols afegits.</p>
+```
+
+**Exemple-007**: Obrir amb "Show preview" la pàgina "02-Web/exemple-007/index.html"
