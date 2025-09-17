@@ -54,7 +54,7 @@ Crea una segona pàgina amb un petit **currículum del paleontòleg**:
 ### Exemple d’estructura d’arxius
 
 ```text
-exercici-000/
+DAM1M04-Exercici000/
 ├── index.html
 ├── contacte.html
 ├── galeria.html
